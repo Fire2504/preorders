@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "C:/xampp/htdocs/vs_code_php"
+		},
+		{
+			"path": "F:/"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "vs_code_php"
+	}
+}

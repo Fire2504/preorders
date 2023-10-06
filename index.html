@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=FontName&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+</head>
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+   
+        background-image: url('nwl.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        animation: slide-up 1.5s ease-out;
+    }
+
+    .content {
+        flex: 1;
+        width: 50%;
+        padding: 20px;
+    }
+
+    .image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    @font-face {
+    font-family: 'TT Norms';
+    src: url('path-to-fonts/tt-norms-regular.woff2') format('woff2'),
+         url('path-to-fonts/tt-norms-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Define additional @font-face rules for other font variants if needed */
+
+
+
+
+
+
+
+p.cont {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    button.center-button {
+        background-color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .tainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+     
+        margin: 20px auto;
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            flex-direction: row;
+        }
+
+        .content {
+            flex: 2;
+        }
+
+        .image {
+            flex: 1;
+        }
+
+        .tainer {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    h2 {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    @media (min-width: 768px) {
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .grid-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @keyframes slide-up {
+        0% {
+            transform: translateY(50%);
+        }
+        50% {
+            transform: translateY(0);
+        }
+    }
+        
+        
+        
+        .container{
+            width: 90vw;
+        }
+        .form-container {
+            position: absolute;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #fff;
+            transition: left 0.5s;
+        }
+        
+        .form-container.open {
+            left: 0;
+            width: 90vw;
+        }
+        
+        .form {
+            padding: 20px;
+            display: none; /* Hide the form initially */
+        }
+        
+        .form.open {
+            display: block; /* Show the form when it has the 'open' class */
+        }
+        
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+</style>
+
+
+
+
+
+
+<body>
+    <div>
+        <h4 style="   animation: slide-up 1.5s ease-out;  padding: 20px;   font-family: 'FontName', sans-serif;">Impulse</h4>
+
+
+    </div>
+    <div class="container">
+       
+  
+        <div class="content">
+                  <p class="cont" style="    font-family: 'TT Norms', Arial, sans-serif; font-size: 25px;">
+                Backyard Creators is a young medical devices company started by twin founders – Raman
+                and Lakshmanan. The company is focused on providing cost-effective solutions
+            </p>
+            <br><br>
+            <button type="button" class="center-button button" id="openButton">Join for hear</button>
+        </div>
+        <div class="image">
+            <img src="BC Logo -bc.png" alt="Your Image" width="100%" height="400px">
+        </div>
+    </div>
+
+    <div class="tainer">
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p>
+                E mail id - <a href="info@backyardcreators.com ">info@backyardcreators.com   </a>
+                </p>
+            <p>Phone: +91 9361145447</p>
+        </div>
+        <div class="section">
+            <h2>Address</h2>
+            <p>Backyard Creators Private Limited ,Rathinam Techzone, Eachanari, Madukkarai, </p>
+            <p>Coimbatore,Tamil Nadu - 641021
+
+            </p>
+        </div>
+        
+    </div>
+    
+        <div class="form-container" id="formContainer">
+        <!-- <form class="form"  method="post" action="/p">
+            <span class="close-button" id="closeButton">X</span>
+          <input name="title" type="text" />
+          <input name="desc" type="text" />
+          <input type="submit" value="Save" />
+        </form> -->
+        <form class="form"  method="post" action="/q">
+            <span class="close-button" id="closeButton">X</span>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="name">First Name:</label>
+                        <input type="text" id="fname" name="fn" class="form-control underline-input" required>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="email">Last Name:</label>
+                        <input type="text" id="lname" name="ln" class="form-control underline-input" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                    
+                <div class="form-group">
+                    <label for="name">email:</label>
+                    <input type="email" id="email" name="email" class="form-control underline-input" required>
+                </div>
+    
+            </div>
+
+
+
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="name">Age:</label>
+                        <input type="text" id="age" name="age" class="form-control underline-input" required>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="email">Gender:</label>
+                        <input type="text" id="gender" name="gender" class="form-control underline-input" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                    
+                <div class="form-group">
+                    <label for="name">Are You Intrested For Trial:</label>
+                    <input type="text" id="trial" name="desc" class="form-control underline-input" required>
+                </div>
+    
+            </div>
+
+            <div class="col-sm">
+                    
+                <div class="form-group">
+                    <label for="name">Contact No:</label>
+                    <input type="text" id="cont" name="contact" class="form-control underline-input" required>
+                </div>
+    
+            </div>
+
+           
+            
+
+<input type="submit" value="submit">
+
+        </form>
+    </div>
+</div>
+    </div>
+    <script>
+        const openButton = document.getElementById('openButton');
+        const closeButton = document.getElementById('closeButton');
+        const formContainer = document.getElementById('formContainer');
+        const form = document.querySelector('.form');
+    
+        openButton.addEventListener('click', () => {
+            form.classList.add('open'); // Show the form by adding the 'open' class
+            formContainer.classList.add('open');
+        });
+    
+        closeButton.addEventListener('click', () => {
+            form.classList.remove('open'); // Hide the form by removing the 'open' class
+            formContainer.classList.remove('open');
+        });
+    </script>
+</body>
+</html>
